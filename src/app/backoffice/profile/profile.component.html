@@ -1,0 +1,180 @@
+<div class="container first-row">
+  <div class="row">
+    <div class="saldo-container col-12 col-md-3 mb-4">
+          <div class="card1 card p-3 shadow-sm  mb-4">
+              <div class="card-content d-flex align-items-center">
+                  <i class="icon1 bi bi-suitcase-lg-fill me-3"></i>
+                  <div class="card-body text-center">
+                      <div class="card-title mb-1">Saldo</div>
+                      <p class="card-body mb-0 fw-bold">$760.420</p>
+                  </div>
+
+              </div>
+          </div>
+          <div class="card2 card p-3 shadow-sm  mb-4">
+              <div class="card-content d-flex align-items-center">
+                  <i class="icon2 bi bi-suitcase-lg-fill me-3"></i>
+                  <div class="card-body text-center">
+                      <div class="card-title mb-1">Procesando</div>
+                      <p class="card-body mb-0 fw-bold">$341.012</p>
+                  </div>
+
+              </div>
+          </div>
+          <div class="card3 card p-3 shadow-sm mb-4">
+              <div class="card-content d-flex align-items-center">
+                  <i class="icon3 bi bi-suitcase-lg-fill me-3"></i>
+                  <div class="card-body text-center">
+                      <div class="card-title mb-1">Pendiente</div>
+                      <p class="card-body mb-0 fw-bold">$113.200</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-12 col-md-3 mb-4 order-first-md-2">
+          <div class="profile-card card w-100 shadow-sm">
+              <img src="profile.jpg" class="profile-img card-img-top w-100 h-100">
+              <div class="card-body">
+                  <h5 class="card-title text-center border rounded">Mario Sanchez</h5>
+                  <p class="card-text text-center">Diseñador gráfico</p>
+                  <div class="row text-center">
+                      <div class="col d-flex flex-column align-items-center">
+                          <div class="fs-4">2</div>
+                          <div>proyectos</div>
+                      </div>
+                      <div class="col d-flex flex-column align-items-center">
+                          <div class="fs-4">19</div>
+                          <div>conexiones</div>
+                      </div>
+                      
+                  </div>
+                  <div class="row mx-auto text-center">
+                      <button class="btn btn-primary p-1" (click)="toggleEditContainer()">
+                          <i class="bi bi-pen-fill me-3"></i>Edit</button>
+                  </div>
+
+              </div>
+
+          </div>
+      </div>
+      <div class="col-12 col-md-6 mt-3">
+        <app-performance-chart></app-performance-chart>
+      </div>
+  </div>
+
+
+
+
+  </div>
+  <div class="row py-3 grid-container">
+  
+      <div class="act shadow bg-light border-3">
+        <h3 class="d-flex justify-content-center align-items-center">
+          Actividades Recientes
+        </h3>
+        <table class="table mt-3">
+          <thead>
+            <tr>
+              <th>Proyecto</th>
+              <th>Fecha Inicio</th>
+              <th>Fecha Fin</th>
+              <th>Equipo</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Desarollo App</td>
+              <td>13/02/2025</td>
+              <td>15/05/2025</td>
+              <td>
+                <div class="d-flex mx-auto">
+                  <img
+                    src="profile1.jpg"
+                    class="img1 rounded-circle border border-white"
+                  />
+                  <img
+                    src="profile2.jpeg"
+                    class="img2 rounded-circle border border-white"
+                  />
+                  <img
+                    src="profile3.jpg"
+                    class="img3 rounded-circle border border-white"
+                  />
+                </div>
+              </td>
+              <td class="">
+                <div
+                  class="estado1 border-3 d-flex justify-content-center align-items-center w-100"
+                >
+                  Éxito
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Configuración del servidor</td>
+              <td>22/02/2025</td>
+              <td>3/04/2025</td>
+              <td>
+                <div class="d-flex mx-auto">
+                  <img
+                    src="profile1.jpg"
+                    class="img1 rounded-circle border border-white"
+                  />
+                  <img
+                    src="profile2.jpeg"
+                    class="img2 rounded-circle border border-white"
+                  />
+                  <img
+                    src="profile3.jpg"
+                    class="img3 rounded-circle border border-white"
+                  />
+                </div>
+              </td>
+              <td class="">
+                <div
+                  class="estado2
+                   border-3 d-flex justify-content-center align-items-center w-100"
+                >
+                  Procesando
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Configuración del servidor</td>
+              <td>22/02/2025</td>
+              <td>3/04/2025</td>
+              <td>
+                <div class="d-flex mx-auto">
+                  <img
+                    src="profile1.jpg"
+                    class="img1 rounded-circle border border-white"
+                  />
+                  <img
+                    src="profile2.jpeg"
+                    class="img2 rounded-circle border border-white"
+                  />
+                  <img
+                    src="profile3.jpg"
+                    class="img3 rounded-circle border border-white"
+                  />
+                </div>
+              </td>
+              <td class="">
+                <div
+                  class="estado1 border-3 d-flex justify-content-center align-items-center w-100"
+                >
+                  Éxito
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+
+

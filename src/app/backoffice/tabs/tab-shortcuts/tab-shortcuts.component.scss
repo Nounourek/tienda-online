@@ -1,0 +1,35 @@
+.shortcut-container {
+    top: 82px;
+    left: 120px;
+    width:200px;
+    min-width: 200px;
+    
+}
+
+
+h2{
+    font-size:10px;
+    color:grey;
+}
+.shortcut-item1{
+    color:blue;
+}
+.shortcut-item2{
+    color:grey;
+}
+.shortcut-item3{
+    color:green;
+}
+.shortcut-item4{
+    color:yellow;
+}
+.shortcut-item5{
+    color:rgb(132, 36, 36);
+}
+.shortcut-item6{
+    color:red;
+}
+.shortcut-item1, .shortcut-item2, .shortcut-item3, .shortcut-item4, .shortcut-item5, .shortcut-item6{
+    height:50px;
+    width:50px;
+}

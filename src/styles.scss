@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Using modern @use syntax */
+@import "./assets/colors";
+@import "./assets/fonts";
+@import "./assets/animations";
+
+/* Using Bootstrap SCSS with wildcard namespace to keep the syntax simple */
+@import "bootstrap/scss/bootstrap";
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+
+/* Custom styles */
+.bg-dark {
+    background-color: #212529 !important;
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+}

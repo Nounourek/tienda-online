@@ -1,0 +1,22 @@
+<div class="header container">
+    <div class="row d-flex justify-content-between align-items-center">
+        <div class="col-6 d- justify-content-start align-items-center">
+            <i class="bi bi-arrow-clockwise"></i>
+            <i class="bi bi-three-dots-vertical"></i>
+        </div>
+        <div class="col-6">
+            <p class="visit text-end">Visitas por tipo de Trafico</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="position-relative z-2 border-bottom m-4">
+<canvas baseChart
+[data]="doughnutChartData"
+[options]="doughnutChartOptions"
+[type]="doughnutChartType">
+
+</canvas>
+</div>
+<app-small-charts></app-small-charts>

@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="header-container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="toggleChart" (change)="toggleChartData()">
+            </div>
+            <h2 class="text-black">Estadísticas de Usuarios</h2>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <canvas baseChart
+            [data]="pointChartData"
+            [options]="pointChartOptions"
+            [type]="pointChartType">
+        </canvas>
+    </div>
+
+    <!-- Footer with Navigators and Rates -->
+    <div class="footer-container mt-3">
+        <div class="row border-top py-2 d-flex align-items-center">
+            <div class="col-4 d-flex align-items-center">
+                <i class="trend-icon bi bi-graph-up-arrow me-2"></i>
+                <h3 class="m-0">Tendencia</h3>
+            </div>
+        </div>
+        <div class="row border-top py-2 d-flex align-items-center">
+            <div class="col-4 d-flex align-items-center">
+                <i class="bi bi-person-lines-fill me-2"></i>
+                <h3 class="m-0">Usuarios Mensuales</h3>
+            </div>
+            <div class="col-8 text-end">
+                <p class="m-0">123,432</p>
+            </div>
+        </div>
+        <div class="row border-top py-2 d-flex align-items-center">
+            <div class="col-4 d-flex align-items-center">
+                <i class="bi bi-calendar-week me-2"></i>
+                <h3 class="m-0">Usuarios Semanales</h3>
+            </div>
+            <div class="col-8 text-end">
+                <p class="m-0">324,222</p>
+            </div>
+        </div>
+    </div>
+</div>

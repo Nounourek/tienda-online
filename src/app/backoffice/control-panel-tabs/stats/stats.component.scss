@@ -1,0 +1,29 @@
+.stats-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*repeat(4, 1fr) todos tienen el mismo tamano*/
+    grid-column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    grid-row-gap:20px;
+
+    /*Puntos de ruptura 1200px y 769px*/
+
+    @media(max-width:1200px){
+        & {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media(max-width:769px){
+        &{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+i{
+    font-size: 30px;
+    color:white;
+}
+p{
+    font-size: 20px;
+    color:white;
+}

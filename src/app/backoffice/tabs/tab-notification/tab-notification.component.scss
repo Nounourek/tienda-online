@@ -1,0 +1,70 @@
+.notification-container {
+    top: 57px;
+    left: 0;
+    width: 350px;
+    min-width: 350px;
+}
+
+.clearall {
+    color: red;
+}
+
+p {
+    font-size: 9px;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers children */
+    padding: 10px 0; /* Add some padding around the messages */
+}
+
+.item-message {
+    width: 90%;
+    max-width: 450px; /* Consistent width */
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 15px; /* Adjust for better balance */
+    align-items: center;
+    margin: 0 auto; /* Center the container */
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.content-item {
+    width: 100%; /* Full width within the grid column */
+    margin: 0; /* Reset margin */
+}
+
+.date-item {
+    font-size: 8px;
+}
+
+.icon-item,
+.icon-item2,
+.icon-item3,
+.icon-item4 {
+    width: 30px;
+    height: 30px;
+    background-color: green; /* Default color for both */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Ensure padding/border doesn’t overflow */
+}
+
+.icon-item2 {
+    background-color: rgba(229, 229, 42, 0.808);
+}
+
+.icon-item3 {
+    background-color: blue;
+}
+
+.icon-item4{
+    background-color: grey;
+}
+.text-warning{
+    color:rgba(211, 189, 23, 0.862);
+}

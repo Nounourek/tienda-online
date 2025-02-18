@@ -1,0 +1,91 @@
+.h2 {
+    white-space: nowrap;
+    font-size: 16px; /* Increased readability */
+    text-align: center; /* Center aligns the text */
+    font-weight: bold;
+}
+
+p {
+    white-space: nowrap;
+    font-size: 40px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.el {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.icon {
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.browser-stats {
+    white-space: nowrap;
+    font-size: small;
+}
+
+.nab {
+    white-space: nowrap;
+    font-size: 10px;
+    text-align: end;
+    transform: translateX(-10px);
+}
+
+.rate {
+    background-color: blue;
+    font-size: 12px; /* Slightly increased for better visibility */
+    color: white;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 10px; /* Ensures a more rounded look */
+    display: inline-block;
+    transform: translateX(10px);
+}
+
+.estadn {
+    font-size: 15px;
+    white-space: nowrap;
+    font-weight: 600;
+    
+
+}
+
+/* Additional Fixes */
+.progress {
+    height: 8px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    transition: width 0.5s ease-in-out;
+}
+.estado{
+    transform: translateX(-10px);
+}
+.btns{
+    font-size:20px;
+    transform: translateX(10px);
+    color:gray;
+}
+.row1{
+    display:flex;
+    flex:wrap;
+    z-index: 1;
+    
+}
+
+
+
+  
