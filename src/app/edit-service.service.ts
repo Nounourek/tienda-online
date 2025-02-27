@@ -15,4 +15,7 @@ export class EditServiceService {
   changeEditStatus(status:boolean):void{
     this.isOpenSubject.next(status);
   }
+  changePassword(newPassword: string):void{
+    console.log("Contraseña cambiado a :", newPassword);
+  }
 }

@@ -1,0 +1,13 @@
+<div class="calendar">
+    <mat-calendar
+      [selected]="selectedDate"
+      (selectedChange)="onDateChange($event)"
+      [dateClass]="dateClass">
+    </mat-calendar>
+  
+    <!-- Mostrar la fecha seleccionada -->
+    <div *ngIf="selectedDate">
+      <p>Fecha seleccionada: {{ selectedDate | date: 'longDate' }}</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,23 @@
+.card {
+        background-color: #00ACEE;  /* Apply the blue background to the card */
+        color: white;  /* Make text visible */
+        border-radius: 10px;  /* Round the corners of the card */
+        padding: 10px;  /* Add padding inside the card */
+      }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    display:none;
+    
+  }
+  .text-muted{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+    
+  }
+  
+  
+
+  

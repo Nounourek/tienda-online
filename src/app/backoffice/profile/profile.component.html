@@ -30,6 +30,8 @@
                   </div>
               </div>
           </div>
+          <div class="carousel ms-4"><app-tweet-carousel></app-tweet-carousel></div>
+
       </div>
       <div class="col-12 col-md-3 mb-4 order-first-md-2">
           <div class="profile-card card w-100 shadow-sm">
@@ -52,6 +54,42 @@
                       <button class="btn btn-primary p-1" (click)="toggleEditContainer()">
                           <i class="bi bi-pen-fill me-3"></i>Edit</button>
                   </div>
+                  <div class="edit-container" [ngClass]="{'d-none': !isEditOpen}">
+                    <div class="card shadow-lg">
+                      <div class="card-body">
+                        <h5 class="card-title mb-3">Editar Perfil</h5>
+                        <form (ngSubmit)="onSubmit(profileForm)" #profileForm="ngForm">
+                          <div class="mb-3">
+                            <label for="username" class="form-label">Nombre de usuario</label>
+                            <input type="text" class="form-control" id="username"  [(ngModel)]="username" name="username" required/>
+                          </div>
+                          <div class="mb-3">
+                            <label for="email" class="form-label">Corre Correo electrónico</label>
+                            <input type="email" class="form-control" id="email"  [(ngModel)]="email" name="email">
+                          </div>
+                          <div class="mb-3">
+                            <label for="currentPassword" class="form-label">Contraseña Actual</label>
+                            <input type="password" class="form-control" id="currentPassword"  [(ngModel)]="currentPassword" name="currentPassword">
+                          </div>
+                          <div class="mb-3">
+                            <label for="newPassword" class="form-label">Nueva Contraseña</label>
+                            <input type="password" class="form-control" id="newPassword"  [(ngModel)]="newPassword" name="newPassword">
+                          </div>
+                          <div class="mb-3">
+                            <label for="confirmNewPassword" class="form-label">Confirmar Nueva Contraseña</label>
+                            <input type="password" class="form-control" id="confirmNewPassword"  [(ngModel)]="confirmNewPassword" name="confirmNewPassword" (input)="checkPasswordMismatch()">
+                          </div>
+                          <div *ngIf="passwordMismatch" class="alert alert-danger">
+                            Las contraseñas no coinciden
+                          </div>
+                          <button type="submit" class="btn btn-success" [disabled]="profileForm.invalid || passwordMismatch">Guardar cambios</button>
+                          <br>
+                           <button type="button" class="btn btn-primary" (click)="toggleEditContainer()">Cerrar</button>
+                          
+                        </form>
+                      </div>
+                    </div>
+                  </div>
 
               </div>
 
@@ -59,13 +97,21 @@
       </div>
       <div class="col-12 col-md-6 mt-3">
         <app-performance-chart></app-performance-chart>
+      
+        <div class="calendar-container">
+          <app-calendar></app-calendar>
+        </div>
       </div>
-  </div>
+
+      
+    
+  
+  
 
 
 
 
-  </div>
+  
   <div class="row py-3 grid-container">
   
       <div class="act shadow bg-light border-3">

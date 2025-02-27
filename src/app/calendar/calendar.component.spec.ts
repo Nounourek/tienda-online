@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SmallChartsComponent } from './small-charts.component';
+import { CalendarComponent } from './calendar.component';
 
-describe('SmallChartsComponent', () => {
-  let component: SmallChartsComponent;
-  let fixture: ComponentFixture<SmallChartsComponent>;
+describe('CalendarComponent', () => {
+  let component: CalendarComponent;
+  let fixture: ComponentFixture<CalendarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SmallChartsComponent]
+      imports: [CalendarComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SmallChartsComponent);
+    fixture = TestBed.createComponent(CalendarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

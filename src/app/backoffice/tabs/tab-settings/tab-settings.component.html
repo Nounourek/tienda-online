@@ -1,39 +1,78 @@
-<div class="settings-container position-fixed slide-right-to-left shadow-sm border-end border-light-subtle">
-
-    <div class="overflow-y-auto w-100 h-100 py-3">
-      <p>settings works!</p>
-  
-      <button type="button" class="btn boton1">Primer elemento</button>
-      <button type="button" class="btn boton2">Segundo elemento</button>
-      <button type="button" class="btn boton3">
-        <span>Tercer elemento</span>
-        <i class="bi bi-house"></i>
-      </button>
-      <button type="button" class="btn boton4">Cuarto elemento</button>
-      <button type="button" class="btn boton5">Quinto elemento</button>
-      <button type="button" class="btn boton6">Sexto elemento</button>
-  
-  
-      <div class="grid-container mt-4 mb-3">
-        <div class="bg-dark">
-          <p class="text-white">Texto de la izquierda</p>
-        </div>
-        <div class="bg-primary">
-          <p class="text-white">Texto de la derecha</p>
-        </div>
-      </div>
-  
-      <div class="mt-4 mb-3 row">
-        <div class="bg-secondary col-xl-3 col-md-5 col-12 d-md-block d-none">
-          <p class="text-white">Texto de la izquierda</p>
-        </div>
-        <div class="bg-dark col-xl-3 col-md-5 col-12">
-          <p class="text-white">Texto de la derecha</p>
-        </div>
-      </div>
-  
-  
+<div class="settings-container position-fixed slide-right-to-left shadow-sm border-end border-light-subtle z-3">
+  <div class="row d-flex justify-content-between align-items-center px-2 border border-bottom g-0 pt-2">
+    <div class="settings-elements col-3" (click)="selectedTab= 'todo'">
+      <h5 class="text-center">Todo</h5>
     </div>
-  
+    <div class="col-3" (click)="selectedTab = 'mensajes'">
+      <h5 class="text-center" >Mensajes</h5>
+    </div>
+    <div class="col-3" (click)="selectedTab='chat'">
+      <h5 class="text-center" >Chat</h5>
+    </div>
   </div>
+    <div *ngIf="selectedTab ==='chat'">
+  <div class="chat row d-flex justify-content-between align-items-center px-2 g-0 pt-3 pb-4 border-bottom">
+    <div class="col-3 text-start"><i class="bi bi-plus"></i></div>
+    <div class="col-3 text-center"><h5 class="text">Usuarios</h5></div>
+    <div class="col-3 text-end"><i class="bi bi-three-dots"></i></div>
+    <div class="position-relative search-container d-flex align-items-center pt-4"> <!--buscador-->
+      <i class="search-icon bi bi-search position-absolute ms-4"></i>
+      <input type="text" class="form-control rounded-pill w-100 text-end" placeholder="Buscar...">
+    </div>
+  </div>
+
+  <!-- Looping content blocks -->
+  <div class="row align-items-center justify-content-end pt-3 me-2" *ngFor="let chat of chatUsers">
+    <div class="col-auto d-flex align-items-center gap-3">
+      <div class="text-end">
+        <h5 class="h5 mb-0">{{ chat.name }}</h5>
+        <p class="p mb-0 ">{{ chat.message }}</p>
+      </div>
+      <div class="col-auto d-flex justify-content-end">
+        <img src="{{ chat.profileImg }}" class="rounded-circle">
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="selectedTab==='mensajes'">
+  <div class="chat row d-flex justify-content-between align-items-center px-2 g-0 pt-3 pb-4 border-bottom">
+    <div class="col-3 text-start"><i class="bi bi-plus"></i></div>
+    <div class="col-3 text-center"><h5 class="text">Mensajes</h5></div>
+    <div class="col-3 text-end"><i class="bi bi-three-dots"></i></div>
   
+
+</div>
+<div class="row align-items-center justify-content-end pt-3 me-2" *ngFor="let msg of messages">
+  <div class="col-auto d-flex align-items-center gap-3">
+    <div class="text-end">
+      <h5 class="h5 mb-0">{{ msg.name }}</h5>
+      <p class="p mb-0 ellipsis-start">{{ msg.message }}</p>
+    </div>
+    <div class="col-auto d-flex justify-content-end">
+      <img src="{{ msg.profileImg }}" class="rounded-circle">
+    </div>
+  </div>
+</div>
+</div>
+<div *ngIf="selectedTab==='todo'">
+  <div class="chat row d-flex justify-content-between align-items-center px-2 g-0 pt-3 pb-4 border-bottom">
+    <div class="col-3 text-start"><i class="bi bi-plus"></i></div>
+    <div class="col-3 text-center"><h5 class="text">Todo</h5></div>
+    <div class="col-3 text-end"><i class="bi bi-three-dots"></i></div>
+  
+
+</div>
+<div class="row align-items-center justify-content-end pt-3 me-2" *ngFor="let task of tasks">
+  <div class="col-auto d-flex align-items-center gap-3">
+    <div class="text-end">
+      <h5 class="h5 mb-0">{{task.name}}</h5>
+    </div>
+    <div class="col-auto d-flex justify-content-end">
+      <i *ngIf="task.status === 'not-done'" class="bi bi-square"></i>
+      <i *ngIf="task.status === 'done-correctly'" class="bi bi-check-square-fill" style="color:green"></i>
+      <i *ngIf="task.status === 'done-badly'" class="bi bi-check-square-fill" style="color:red"></i>
+
+    </div>
+  </div>
+</div>
+</div>

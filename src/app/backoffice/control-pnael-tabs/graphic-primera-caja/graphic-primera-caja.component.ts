@@ -3,14 +3,14 @@ import { ChartConfiguration, ChartDataset, ChartType } from 'chart.js';
 import {BaseChartDirective,} from 'ng2-charts';
   
 import { CommonModule } from '@angular/common';
-import { SmallChartsComponent } from "./small-charts/small-charts.component";
+
 
 
 @Component({
   selector: 'app-graphic-primera-caja',
 
   imports: [BaseChartDirective,
-    CommonModule, SmallChartsComponent],
+    CommonModule, ],
   providers:[],
   standalone:true,
   templateUrl: './graphic-primera-caja.component.html',

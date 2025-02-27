@@ -1,6 +1,13 @@
+
+
 header {
-    height:70px;
+    width: 100%;
+    padding: 0; /* Ensure there's no padding */
+    margin: 0; /* Ensure there's no margin */
+    box-sizing: border-box; /* Ensures padding is part of the element size */
     
+  
+  
     
 
     .imagen-perfil{

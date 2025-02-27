@@ -2,20 +2,49 @@
 .sidebar-container {
     overflow-x: hidden;
     overflow-y: auto;
-    
+    position:relative;
+
     
   
     &.hide-me {
-      span, h2 {
-        display: none !important;
-      }
+      span, h2, .i1 {
+      display: none !important;
+      
+     }
     }
   
   }
+  .menu{
+    color:#4cc9f0;
+  }
   
 
-.container-redes{
-    font-size:large;
-    color:rgb(167, 167, 28);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+.dropdown-menu-custom {
+  font-size:14px;
+  margin-left: 20px;
+  display:grid;
+  justify-content: center;
+  list-style:none;
+  background-color: #7209b7;
+  padding:10px 0;
+  border-radius: 8%;
+  height:190px;
+  width:190px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+ 
 }
+.dropdown-menu-custom li{
+  padding:12px 10px;
+  cursor:pointer;
+  text-align:center;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  transition:all 0.3 ease-in-out;
+  text-decoration: underline;
+ 
+}
+
+
